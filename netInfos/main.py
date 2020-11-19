@@ -1,4 +1,4 @@
-#! /usr/bin/python3
+#!/usr/bin/python3
 import requests
 import socket
 import netifaces
@@ -43,7 +43,7 @@ def displayIPv6(addrs, offset=0):
         display = f"\n {TAB * offset + ' ' * 11}".join(
             [addrs[netifaces.AF_INET6][i]['addr'] for i in range(len(addrs[netifaces.AF_INET6]))])
         print(f"{TAB*offset}IPv6 addr : {display}")
-    except ValueError:
+    except (ValueError, KeyError):
         pass
 
 
