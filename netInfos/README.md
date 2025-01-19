@@ -4,14 +4,12 @@
 
 ## Presentation
 
-Tool for display some network informations like : 
+Tool for display some network informations like :
 
 - Hostname
 - Public IPv4
 - MAC addresses
 - Local IPv4 and IPv6
-
-
 
 ## How to use
 
@@ -28,3 +26,13 @@ usage: ``main.py [-h] [--hostname] [--publicip] [--interfaces] [-4] [-6] [-a]``
   -a, --all     Display all information
 ```
 
+## Dev
+
+To improve the script, you can change it.  
+All requirements are in ``requirements.txt``. You can install with ``pip install -r requirements.txt``.  
+And for make binary, you can use ``pyinstaller``.
+
+```bash
+pip install pyinstaller
+pyinstaller --onefile --name=netInfos main.py
+```
